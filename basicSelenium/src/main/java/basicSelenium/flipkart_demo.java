@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class flipkart_demo {
 	public static void main(String[] args) {
 
-		WebDriver driver = new EdgeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
 
 		String title = driver.getTitle();
