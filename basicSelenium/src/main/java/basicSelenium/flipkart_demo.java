@@ -3,16 +3,18 @@ package basicSelenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+//get
+//getTitle
+//getCurrentUrl
+//getPageSource
 
 public class flipkart_demo {
 	public static void main(String[] args) {
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
-
 		String title = driver.getTitle();
-		
-		
+	
 		System.out.println(title);
 		System.out.println("Title Length : "+title.length());
 		
@@ -31,9 +33,6 @@ public class flipkart_demo {
 		//System.out.println(page);
 		System.out.println("PAGE LENGTH : "+page.length());
 		
-		
-		
-		
-
+		driver.quit();
 	}
 }
