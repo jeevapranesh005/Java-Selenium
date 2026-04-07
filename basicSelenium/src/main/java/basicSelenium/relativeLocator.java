@@ -42,12 +42,7 @@ public class relativeLocator {
 		WebElement rig = driver.findElement(with(By.tagName("a")).toRightOf(tab));
 		rig.click();
 		Thread.sleep(5000);
-		
-		
-
-		
-		
-		
+			
 		
 		//label[text()="First Name "]/following::input[1][@type='text']
 		driver.quit();
