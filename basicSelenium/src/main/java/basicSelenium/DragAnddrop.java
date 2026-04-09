@@ -14,7 +14,8 @@ public class DragAnddrop {
 		d.manage().window().maximize();
 		d.get("https://leafground.com/drag.xhtml");   
 		Actions act=new Actions(d);
-		WebElement drag=d.findElement(By.cssSelector("div[id='form:drag_content'] "));
+		WebElement drag=d.findElement(By.cssSelector("div[id='form:"
+				+ ".drag_content'] "));
 		WebElement drop=d.findElement(By.cssSelector("div[id='form:drop_header']"));
 		
 		act.dragAndDrop(drag,drop).perform();
