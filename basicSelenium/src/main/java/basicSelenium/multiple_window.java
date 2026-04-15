@@ -7,6 +7,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class multiple_window {
@@ -38,18 +39,19 @@ public class multiple_window {
 		System.out.println("child "+childwindow);
 		
 		//switch to child
-		driver.switchTo().window(childwindow);
+		driver.switchTo().newWindow(WindowType.TAB);
 		
-		//text of child window
-		WebElement text = driver.findElement(By.id("sampleHeading"));
-		System.out.println("child_title "+text.getText());
-		
-		
-		driver.close();
-		
-		driver.switchTo().window(parentWindow);
-		System.out.println("parent_title "+driver.getTitle());
-		
+//		
+//		//text of child window
+//		WebElement text = driver.findElement(By.id("sampleHeading"));
+//		System.out.println("child_title "+text.getText());
+//		
+//		
+//		driver.close();
+//		
+//		driver.switchTo().window(parentWindow);
+//		System.out.println("parent_title "+driver.getTitle());
+//		
 		driver.quit();
 		
 	}

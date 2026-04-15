@@ -1,6 +1,7 @@
 package basicSelenium;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class navigation {
@@ -8,7 +9,7 @@ public class navigation {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
+		driver.switchTo().newWindow(WindowType.TAB);
 		driver.navigate().to("https://www.amazon.in/");
 		Thread.sleep(5000);
 		driver.navigate().back();
